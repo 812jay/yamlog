@@ -3,8 +3,9 @@ import 'package:flutter_flavor/flutter_flavor.dart';
 import 'package:yamlog/core/flavor_config.dart';
 import 'package:yamlog/presentation/views/home_view.dart';
 
-void main() {
-  setFlavor();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await setFlavorConfig();
 
   runApp(const MyApp());
 }
